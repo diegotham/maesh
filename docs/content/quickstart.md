@@ -156,7 +156,7 @@ replicaset.apps/server-7c8fd58db5   2         2         2         77s
 Take note of the client app pod name (here it's `client-7446fdf848-x96fq`) and open a new terminal session inside this pod using `kubectl exec`.
 
 ```bash
-kubectl -n maesh-test exec -ti client-7446fdf848-x96fq ash
+kubectl -n maesh-test exec -ti client-7446fdf848-x96fq -- ash
 ```
 
 From inside the client container, make sure your server is reachable using the Kubernetes DNS service discovery.
